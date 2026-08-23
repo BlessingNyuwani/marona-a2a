@@ -1,0 +1,9 @@
+.git
+.github
+.idea
+.env
+.venv
+node_modules
+target
+dist
+
