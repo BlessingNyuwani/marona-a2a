@@ -1,0 +1,40 @@
+[project]
+name = "marona-a2a-python-example"
+version = "0.1.0"
+description = "A2A server, peer, and realtime examples for Marona."
+requires-python = ">=3.11"
+dependencies = [
+  "marona==0.13.9",
+  "uvicorn>=0.35,<1",
+]
+
+[project.optional-dependencies]
+dev = [
+  "mypy>=1.17,<2",
+  "pytest>=8.4,<9",
+  "pytest-asyncio>=1.1,<2",
+  "ruff>=0.12,<1",
+]
+
+[project.scripts]
+marona-a2a = "marona_a2a.server:main"
+marona-a2a-peer = "marona_a2a.peer:main"
+marona-a2a-realtime = "marona_a2a.realtime:main"
+
+[build-system]
+requires = ["setuptools>=80"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[tool.mypy]
+python_version = "3.11"
+strict = true
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
