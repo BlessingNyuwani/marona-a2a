@@ -36,10 +36,8 @@ Run TypeScript instead:
 docker compose --profile typescript up --build typescript
 ```
 
-Java requires the current Marona Java SDK to be installed locally before its
-JAR and image can be built. This is documented explicitly in the Java README;
-the Java CI job should be enabled when `ai.marona:marona` is published to a
-public Maven repository.
+Java resolves `ai.marona:marona:0.14.2` directly from Maven Central. No local
+SDK installation is required before building its JAR or image.
 
 ## Security defaults
 
