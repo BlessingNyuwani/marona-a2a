@@ -1,7 +1,7 @@
 # Marona A2A
 
 Provider-neutral Agent-to-Agent examples for Marona AI Runtime in Python,
-TypeScript, and Java. Each language demonstrates:
+TypeScript, Java, and Rust. Each language demonstrates:
 
 - `a2a`: expose an Agent Card and task endpoint
 - `a2a-peer`: discover and call an independent peer safely
@@ -17,6 +17,7 @@ model provider or require paid credentials.
 | [Python](examples/python) | HTTP+JSON and JSON-RPC | Marona `A2APeer` | SSE task/artifact stream |
 | [TypeScript](examples/typescript) | HTTP+JSON | Marona `A2APeer` | SSE task/artifact stream |
 | [Java](examples/java) | JSON-RPC | Marona `A2APeer` | Started/completed lifecycle events |
+| [Rust](examples/rust) | JSON-RPC | Marona `A2APeer` | Task result lifecycle |
 
 See [A2A architecture and trust boundaries](docs/architecture.md) before
 adapting an example for production.
@@ -34,6 +35,15 @@ Run TypeScript instead:
 
 ```bash
 docker compose --profile typescript up --build typescript
+```
+
+The Rust example uses the official `marona = "0.14.0"` crates.io package:
+
+```bash
+cd examples/rust
+cargo run -- server
+# In another terminal:
+cargo run -- peer
 ```
 
 Java resolves `ai.marona:marona:0.14.2` directly from Maven Central. No local
