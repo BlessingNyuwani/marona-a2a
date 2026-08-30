@@ -47,3 +47,12 @@ jobs:
       - run: docker build -f examples/python/Dockerfile -t marona-a2a-python .
       - run: docker build -f examples/typescript/Dockerfile -t marona-a2a-typescript .
 
+  rust:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: examples/rust
+    steps:
+      - uses: actions/checkout@v4
+      - uses: dtolnay/rust-toolchain@stable
+      - run: cargo test --locked
