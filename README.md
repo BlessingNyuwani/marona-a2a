@@ -43,8 +43,6 @@ adapting an example for production.
 Start the Python peer server:
 
 ```bash
-cp .env.example .env
-# Replace mr_live_xxxxx with your real MARONA_API_KEY in the local .env file.
 docker compose up --build python
 curl http://127.0.0.1:8100/.well-known/agent-card.json
 ```
