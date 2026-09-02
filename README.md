@@ -10,6 +10,22 @@ TypeScript, Java, and Rust. Each language demonstrates:
 The examples use a deterministic travel-planning domain so tests do not call a
 model provider or require paid credentials.
 
+## Marona Developer Key is required
+
+Every Marona Runtime operation requires `MARONA_API_KEY`, including A2A flows
+that use managed, BYOK, local, private, external, or self-hosted models:
+
+```bash
+export MARONA_API_KEY=mr_live_xxxxx # placeholder; use your real key locally
+```
+
+The key authenticates the developer and project with Marona. It is separate
+from model-provider credentials and from an optional peer-specific
+`A2A_BEARER_TOKEN`. The deterministic protocol tests and standalone localhost
+peer do not contact Marona Runtime, but connecting an A2A flow to the Runtime
+requires the developer key. Create and manage keys at
+<https://platform.marona.ai>; never commit a real key.
+
 ## Language examples
 
 | Language | A2A server | Secure peer | Realtime |
@@ -27,6 +43,8 @@ adapting an example for production.
 Start the Python peer server:
 
 ```bash
+cp .env.example .env
+# Replace mr_live_xxxxx with your real MARONA_API_KEY in the local .env file.
 docker compose up --build python
 curl http://127.0.0.1:8100/.well-known/agent-card.json
 ```
