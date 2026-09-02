@@ -1,5 +1,13 @@
 # Java A2A examples
 
+Marona Runtime-backed A2A execution requires a Marona Developer Key. The local
+protocol tests do not contact the Runtime; configure the key before using these
+examples in a Runtime flow:
+
+```bash
+export MARONA_API_KEY=mr_live_xxxxx # placeholder; use your real key locally
+```
+
 Maven resolves `ai.marona:marona:0.14.2` directly from Maven Central. No
 sibling checkout or local SDK installation is required:
 
