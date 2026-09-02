@@ -40,12 +40,33 @@ jobs:
       - run: pnpm install --frozen-lockfile
       - run: pnpm test
 
+  java:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: examples/java
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: "17"
+          cache: maven
+      - run: mvn --batch-mode verify
+
   containers:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
       - run: docker build -f examples/python/Dockerfile -t marona-a2a-python .
       - run: docker build -f examples/typescript/Dockerfile -t marona-a2a-typescript .
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: "17"
+          cache: maven
+      - run: mvn --batch-mode -f examples/java/pom.xml package
+      - run: docker build -f examples/java/Dockerfile -t marona-a2a-java .
 
   rust:
     runs-on: ubuntu-latest
