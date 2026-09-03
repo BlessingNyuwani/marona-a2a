@@ -12,11 +12,10 @@
     "test": "pnpm run build && node --test test/*.test.mjs"
   },
   "dependencies": {
-    "marona": "0.13.8"
+    "marona": "1.0.0"
   },
   "devDependencies": {
     "@types/node": "^24.0.0",
     "typescript": "^5.9.0"
   }
 }
-

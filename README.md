@@ -53,7 +53,7 @@ Run TypeScript instead:
 docker compose --profile typescript up --build typescript
 ```
 
-The Rust example uses the official `marona = "0.14.0"` crates.io package:
+The Rust example uses the official `marona = "1.0.0"` crates.io package:
 
 ```bash
 cd examples/rust
@@ -62,7 +62,7 @@ cargo run -- server
 cargo run -- peer
 ```
 
-Java resolves `ai.marona:marona:0.14.2` directly from Maven Central. No local
+Java resolves `ai.marona:marona:1.0.0` directly from Maven Central. No local
 SDK installation is required before building its JAR or image.
 
 ## Security defaults

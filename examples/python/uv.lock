@@ -231,16 +231,16 @@ wheels = [
 
 [[package]]
 name = "marona"
-version = "0.13.9"
+version = "1.0.0"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "httpx" },
     { name = "pydantic" },
     { name = "websockets" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/4c/77/19252ea60f1199fdfe7e536d437f7462f98cbdd34f8b2967baea50aaf717/marona-0.13.9.tar.gz", hash = "sha256:e91d7dd72a3353cc3752e03993224675e78533ec9ff020b34fc749d5c78cb639", size = 108656, upload-time = "2026-08-16T10:26:16.471Z" }
+sdist = { url = "https://files.pythonhosted.org/packages/cf/36/9650a19b105ebdf9c3d5a97e76e9d4138c93c00c4d24511ab1cd9e1a1b52/marona-1.0.0.tar.gz", hash = "sha256:15fb3df1749baa42167380287c9914f4aee21861bd1f68cfcd1dd9f85e60cc12", size = 85127, upload-time = "2026-09-03T07:12:07.496Z" }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/a3/15/d891c4f69c3dd1b2ec400297bb3c79f15c862939ef6cd90d0dd9950c37ee/marona-0.13.9-py3-none-any.whl", hash = "sha256:e01c74e7f50a4b491ae630ab60920316000f7a77e2693c2cd2903107692d9d8c", size = 93115, upload-time = "2026-08-16T10:26:14.679Z" },
+    { url = "https://files.pythonhosted.org/packages/65/a3/f7c2a4a490d1ad522bb26eaacfc114ec26a004c7e41db6f1884daadc5b9e/marona-1.0.0-py3-none-any.whl", hash = "sha256:c275fd6c220bfcb379940cfbf4055cac4f63e5b6ec7fc4b2ac81083b6d4d40a2", size = 75391, upload-time = "2026-09-03T07:12:06.144Z" },
 ]
 
 [[package]]
@@ -262,7 +262,7 @@ dev = [
 
 [package.metadata]
 requires-dist = [
-    { name = "marona", specifier = "==0.13.9" },
+    { name = "marona", specifier = "==1.0.0" },
     { name = "mypy", marker = "extra == 'dev'", specifier = ">=1.17,<2" },
     { name = "pytest", marker = "extra == 'dev'", specifier = ">=8.4,<9" },
     { name = "pytest-asyncio", marker = "extra == 'dev'", specifier = ">=1.1,<2" },

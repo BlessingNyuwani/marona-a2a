@@ -4,7 +4,7 @@ version = "0.1.0"
 description = "A2A server, peer, and realtime examples for Marona."
 requires-python = ">=3.11"
 dependencies = [
-  "marona==0.13.9",
+  "marona==1.0.0",
   "uvicorn>=0.35,<1",
 ]
 
